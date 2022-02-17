@@ -44,36 +44,199 @@
     <!-- Título -->
     <h1 class="my-4" style="text-align: center;">Resumen de Compra</h1>
     
-    <div class="card-deck justify-content-center">
+    <!-- Producto en carrito + total -->
+    <div class="card-deck justify-content-center my-5">
+        <!-- Productos -->
         <div class="card col-lg-7 border-0">
             <div class="card">
                 <div class="media my-3 mx-3">
                     <div class="media-body my-3 mr-3">
-                        <h5 class="mt-0 mb-1">Media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <h5 class="mt-0 mb-1">Gabinete ATX - RGB múltiple - Sin fuente de alimentación <span><button type="button" class="btn btn-danger"><i class="fas fa-trash    "></i></button></span></h5>
+                        <div class="w-50 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Cantidad:</div>
+                                </div>
+                                <select class="custom-select custom-select-md">
+                                    <option selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-pencil-alt    "></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-50 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Precio:</div>
+                                </div>
+                                <input class="form-control" type="text" placeholder="$3,600.00" readonly>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">mxn</div>
+                                </div>
+                            </div>
+                        </div>
                       </div>
                       <img class="align-self-center my-3 w-25" src="./img/prod1.png" alt="Generic placeholder image">
                 </div>
             </div>
             <div class="card">
-                <div class="media">
+                <div class="media my-3 mx-3">
                     <div class="media-body my-3 mr-3">
-                        <h5 class="mt-0 mb-1">Media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <h5 class="mt-0 mb-1">Tarjeta de video - GForce RTX 2080Ti 11 GB - Sin RGB <span><button type="button" class="btn btn-danger"><i class="fas fa-trash    "></i></button></span></h5>
+                        <div class="w-50 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Cantidad:</div>
+                                </div>
+                                <select class="custom-select custom-select-md">
+                                    <option selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-pencil-alt    "></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-50 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Precio:</div>
+                                </div>
+                                <input class="form-control" type="text" placeholder="$37,000.00" readonly>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">mxn</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <img class="align-self-center m-3 w-25" src="./img/prod5.png" alt="Generic placeholder image">
                 </div>
             </div>
         </div>
+        <!-- Total -->
         <div class="card col-lg-3">
-          <div class="card-body">
-            <h5 class="card-title">Total de Compra</h5>
-            <hr>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+            <div class="card-body">
+                <h5 class="card-title">Total de Compra</h5>
+                <hr>
+                <div id="producto1">
+                    <p class="card-text">Gabinete ATX - RGB múltiple - Sin fuente de alimentación</p>
+                    <p style="color: gray;">1 x $3,600.00</p>
+                </div>
+                <div id="producto2">
+                    <p class="card-text">Tarjeta de video - GForce RTX 2080Ti 11 GB - Sin RGB</p>
+                    <p style="color: gray;">1 x $37,000.00</p>
+                </div>
+                <hr>
+                <div id="envio">
+                    <p class="card-text">Monto a pagar: $40,600.00</p>
+                </div>
+                <div class="buttons my-3">
+                    <button type="button" class="btn btn-outline-success btn-lg btn-block">Pagar</button>
+                    <button type="button" class="btn btn-outline-danger btn-sm btn-block">Cancelar</button>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+
+    <!-- Mi cuenta > Modal Ingresar -->
+    <form action="">
+        <div class="modal fade" id="modalIngresar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ingresar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <label for="">Correo</label>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" id="userLogin" placeholder="Ingresa tu correo" aria-label="Correo" aria-describedby="basic-addon1" required>
+                                <div class="invalid-feedback">
+                                    Por favor ingresa un correo.
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user    "></i></span>
+                                </div>
+                            </div>
+                            <label for="">Password</label>
+                            <div class="input-group mb-4">
+                                <input type="password" class="form-control" id="passwordLogin" placeholder="Ingresa tu contraseña" aria-label="Password" aria-describedby="basic-addon1" required>
+                                <div class="invalid-feedback">
+                                    Por favor ingresa una contraseña.
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-key    "></i></span>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <button type="submit" class="btn btn-success btn-block d-flex justify-content-center">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-end">
+                        <p>No tienes cuenta! <a data-dismiss="modal" href="" data-toggle="modal" data-target="#modalRegistro">Registrate aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Mi cuenta > Modal Registro -->
+    <form action="">
+        <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Registrar usuario</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="input-group mb-3">
+                                <div class="form-row col-md-12">
+                                    <div class="form-group col-md-6">
+                                      <input type="text" class="form-control" id="nombreRegistro" placeholder="Nombre(s)" pattern="(?=.*[a-Z])" title="El nombre solo puede tener letras." required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <input type="text" class="form-control" id="passwordRegistro" placeholder="Apellidos" pattern="(?=.*[a-Z])" title="El nombre solo puede tener letras." required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="email" class="form-control" id="emailRegistro" placeholder="Tu correo" required>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="password" class="form-control" id="passwordRegistro" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-1]).{6,}" title="El password debe contener minúsculas, mayúsculas, números y una longitud de 6." required validate>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="password" class="form-control" id="passwordConfirmRegistro" placeholder="Confirmar Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-1]).{6,}" title="El password debe contener minúsculas, mayúsculas, números y una longitud de 6." required validate>
+                                </div>
+                                <div class="">
+                                    
+                                </div>
+                            </div>
+                            <div class="container">
+                                <button type="submit" class="btn btn-success btn-block d-flex justify-content-center">Registrarse</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-end">
+                        <p>Ya tienes cuenta! <a data-dismiss="modal" href="" data-toggle="modal" data-target="#modalIngresar">Inicia sesión</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
