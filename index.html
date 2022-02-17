@@ -9,6 +9,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        #producto:hover{
+            box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+            background-color:lightgray;
+        }
+    </style>
+
   </head>
   <body>
     <!-- Navbar inicio -->
@@ -74,7 +82,7 @@
     <!-- Cards inicio -->
     <div class="card-group mt-5 ml-5 mr-5 mb-5">
         <div class="row">
-            <div class="card col-lg-3 col-md-4 col-sm-6">
+            <div class="card col-lg-3 col-md-4 col-sm-6" id="producto">
                 <div class="container w-100 h-50">
                     <img class="card-img-top mt-4 mb-4" src="./img/prod1.png" alt="">
                 </div>
@@ -87,7 +95,7 @@
                     <small class="text-muted">Existencias: 7</small>
                 </div>
             </div>
-            <div class="card col-lg-3 col-md-4 col-sm-6">
+            <div class="card col-lg-3 col-md-4 col-sm-6" id="producto">
                 <div class="container w-100 h-50">
                     <img class="card-img-top mt-4 mb-4" src="./img/prod2.png" alt="">
                 </div>
@@ -100,7 +108,7 @@
                     <small class="text-muted">Existencias: 3</small>
                 </div>
             </div>
-            <div class="card col-lg-3 col-md-4 col-sm-6">
+            <div class="card col-lg-3 col-md-4 col-sm-6" id="producto">
                 <div class="container w-100 h-50">
                     <img class="card-img-top mt-4 mb-4" src="./img/prod3.png" alt="">
                 </div>
@@ -113,7 +121,7 @@
                     <small class="text-muted">Existencias: 9</small>
                 </div>
             </div>
-            <div class="card col-lg-3 col-md-4 col-sm-6">
+            <div class="card col-lg-3 col-md-4 col-sm-6" id="producto">
                 <div class="container w-100 h-50">
                     <img class="card-img-top mt-4 mb-4" src="./img/prod4.png" alt="">
                 </div>
@@ -128,7 +136,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="card col-lg-3 col-md-4 col-sm-6">
+            <div class="card col-lg-3 col-md-4 col-sm-6" id="producto">
                 <div class="container w-100 h-50">
                     <img class="card-img-top mt-4 mb-4" src="./img/prod5.png" alt="">
                 </div>
@@ -141,7 +149,7 @@
                     <small class="text-muted">Existencias: 4</small>
                 </div>
             </div>
-            <div class="card col-lg-3 col-md-4 col-sm-6">
+            <div class="card col-lg-3 col-md-4 col-sm-6" id="producto">
                 <div class="container w-100 h-50">
                     <img class="card-img-top mt-4 mb-4" src="./img/prod6.png" alt="">
                 </div>
@@ -154,7 +162,7 @@
                     <small class="text-muted">Existencias: 6</small>
                 </div>
             </div>
-            <div class="card col-lg-3 col-md-4 col-sm-6">
+            <div class="card col-lg-3 col-md-4 col-sm-6" id="producto">
                 <div class="container w-100 h-50">
                     <img class="card-img-top mt-4 mb-4" src="./img/prod7.png" alt="">
                 </div>
@@ -167,7 +175,7 @@
                     <small class="text-muted">Existencias: 4</small>
                 </div>
             </div>
-            <div class="card col-lg-3 col-md-4 col-sm-6">
+            <div class="card col-lg-3 col-md-4 col-sm-6" id="producto">
                 <div class="container w-100 h-50">
                     <img class="card-img-top mt-4 mb-4" src="./img/prod8.png" alt="">
                 </div>
@@ -265,10 +273,10 @@
                             <div class="input-group mb-3">
                                 <div class="form-row col-md-12">
                                     <div class="form-group col-md-6">
-                                      <input type="text" class="form-control" id="nombreRegistro" placeholder="Nombre(s)" pattern="(?=.*[a-Z])" title="El nombre solo puede tener letras." required>
+                                      <input type="text" class="form-control" id="nombreRegistro" placeholder="Nombre(s)" pattern="[a-zA-Z ]+" title="El nombre solo puede tener letras." required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                      <input type="text" class="form-control" id="passwordRegistro" placeholder="Apellidos" pattern="(?=.*[a-Z])" title="El nombre solo puede tener letras." required>
+                                      <input type="text" class="form-control" id="apellidoRegistro" placeholder="Apellidos" pattern="[a-zA-Z ]+" title="El nombre solo puede tener letras." required>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12">
